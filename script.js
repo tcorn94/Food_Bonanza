@@ -5,15 +5,12 @@
 $(document).ready(function(){
 
 
-
 var appID = "8762ceb6";
 var appKey = "87390675c80ad08855757b2abc17feb2";
 var data;
 var searchTerm = "chicken";
 
-
-
-
+//  click submit button to search for recipe
 $("#submit").on("click", function(event) {
   event.preventDefault();
 

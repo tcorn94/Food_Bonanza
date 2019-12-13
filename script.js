@@ -1,7 +1,21 @@
 // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
 
+// var title = "garlic";
+// var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c="+ title;
+// //how to access API data (make http request)
+// fetch({
+//   url: queryURL,
+//   method: "GET"
+// }).then(function(response) {
+//   console.log(response);//comes back as an object, then we traverse through object to call info
 
-<script src="https://apis.google.com/js/api.js"></script>
+// });
+
+
+
+
+
+{/* <script src="https://apis.google.com/js/api.js"></script>
 <script>
   /**
    * Sample JavaScript code for youtube.search.list
@@ -37,4 +51,4 @@
   });
 </script>
 <button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+<button onclick="execute()">execute</button> */}

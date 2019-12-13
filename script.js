@@ -1,4 +1,3 @@
-
 // https://api.edamam.com/search?q=chicken&app_id=${appID}&app_key=${appKey}
 //https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
 //https://cors-anywhere.herokuapp.com/
@@ -27,7 +26,13 @@ fetch(queryURL, {
 
 // });
 
-
-
-
-
+$(function() {
+  $(window).scroll(function() {
+    var winTop = $(window).scrollTop();
+    if (winTop >= 30) {
+      $("body").addClass("sticky-shrinknav-wrapper");
+    } else {
+      $("body").removeClass("sticky-shrinknav-wrapper");
+    }
+  });
+});

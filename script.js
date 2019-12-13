@@ -11,29 +11,25 @@ var appKey = "87390675c80ad08855757b2abc17feb2";
 var data;
 var searchTerm = "chicken";
 
-var queryURL = `https://api.edamam.com/search?q=${searchTerm}&app_id=${appID}&app_key=${appKey}`;
-fetch(queryURL, { method: "GET" })
+
+
+
+$("#submit").on("click", function(event) {
+  event.preventDefault();
+
+  searchTerm = $("#search").val().trim();
+  console.log(searchTerm)
+
+  var queryURL = `https://api.edamam.com/search?q=${searchTerm}&app_id=${appID}&app_key=${appKey}`;
+
+  fetch(queryURL, { method: "GET" })
   .then(function(response) {
     return response.json();
   })
   .then(function(res) {
     data = res;
     console.log(data);
-  });
 
-
-var keyWord = $("#search").val().trim();
-
-
-$("#submit").on("click", function(event) {
-  event.preventDefault();
-  console.log(keyWord)
-  var queryURL =`https://api.edamam.com/search?q=` + keyWord + `&app_id=${appID}&app_key=${appKey}`;
-  fetch(queryURL, {
-    method: "GET"
-  }).then(function(response) {
-    data = response.json();
-    console.log(data);
   });
 });
 

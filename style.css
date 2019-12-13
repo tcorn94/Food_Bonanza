@@ -1,0 +1,12 @@
+footer{
+    height:80px;
+    padding: 20px;
+    width: 100%;
+    color: antiquewhite;
+    font-size: larger;
+    background-color: darkgray;
+    border-top: black solid 2px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}

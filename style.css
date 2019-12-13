@@ -77,3 +77,7 @@ body.sticky-shrinknav-wrapper
   transform: scale(0);
   transition: all 0.3s ease;
 }
+
+#headerLogo {
+  align-content: center;
+}

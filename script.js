@@ -4,14 +4,10 @@
 //https://api.edamam.com/search?q=chicken&app_id=8762ceb6&app_key=87390675c80ad08855757b2abc17feb2&from=0&to=3&calories=591-722&health=alcohol-free"
 $(document).ready(function(){
 
-
-
 var appID = "8762ceb6";
 var appKey = "87390675c80ad08855757b2abc17feb2";
 var data;
 var searchTerm = "chicken";
-
-
 
 
 $("#submit").on("click", function(event) {

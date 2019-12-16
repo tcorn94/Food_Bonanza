@@ -13,6 +13,12 @@ var appKey = "87390675c80ad08855757b2abc17feb2";
 var data;
 var searchTerm = "chicken";
 
+var recipeList = $(".recipe-list");
+var recipeBlock = $("#recipe-block-row");
+var imgCol = $("#col-1.img");
+var detailCol = $("#col-2.detail");
+var submitBtn = $("#submit");
+
 
 //  click submit button to search for recipe
 $("#submit").on("click", function(event) {
@@ -48,15 +54,37 @@ $("#submit").on("click", function(event) {
     var yield = data.hits[0].recipe.yield;
     console.log(yield);
 
+
+    generateRecipeBlock(recipeName, recipeImage, ingredients, cookTime, calories, yield);
+
     var generateRecipeBlock(recipeName);
+
 
 
   });
 });
 
+
+   function generateRecipeBlock(){
+
+    submitBtn.on("click", function(){
+      for (i = 0; i <= 5; i++){
+
+        imgCol.append(recipeImage);
+        detailCol.append(recipeName, ingredients, cookTime, calories, yield)
+
+        recipeBlock.append(imgCol, detailCol)
+
+      }
+
+    })
+
+
+
   generateRecipeBlock(){
 
     
+
   }
 
 

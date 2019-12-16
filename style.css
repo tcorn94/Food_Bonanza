@@ -81,6 +81,7 @@ body.sticky-shrinknav-wrapper
 
 #headerLogo {
   align-content: center;
+  margin-top: 10px;
 }
 
 footer {
@@ -89,8 +90,8 @@ footer {
   width: 100%;
   color: antiquewhite;
   font-size: larger;
-  background-color: darkgray;
-  border-top: black solid 2px;
+  background-color: #626E60;
+  border-top: #3c3c3c solid 2px;
   position: fixed;
   bottom: 0;
   text-align: center;
@@ -119,52 +120,78 @@ footer {
   font-size: larger;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 20px;
-  border: solid 2px black;
+  border: solid 3px #AF473C;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   background-color: #f1f1f1;
+  display: none;
 }
 
 .recipe-card{
   font-size: larger;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 20px;
-  border: solid 2px black;
+  border: solid 3px #626e60;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   background-color: #f1f1f1;
+  display: none;
 }
 
 #submit{
-  height: 30px;
+  height: 40px;
   width: 80px;
   margin: 15px;
   border: 2px solid #fefefe;
   color: #fefefe;
   padding: 10px;
   text-align: center;
-  background-color: black;
- padding-bottom: 10px;
+  background-color:#AF473C;
+ vertical-align: middle;
+ font-weight: bolder;
 
 }
 
 #submit:hover{
-  background-color: darkgray;
+  background-color: #626e60;
 }
 
 #addIngr{
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin: 15px;
   border: 2px solid #fefefe;
   color: #fefefe;
-  padding: 10px;
   text-align: center;
-  background-color: black;
+  background-color:#AF473C;
+  vertical-align: middle;
+  font-weight: bolder;
 }
 
 #addIngr:hover{
-  background-color: darkgray;
+  background-color:#626E60;
+}
+
+
+.Img{
+border: solid 3px #626E60;
+
+padding: 20px;
+
+
+}
+
+.Details{
+  border: solid 3px #626E60;
+text-align: left;
+padding: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+
+}
+
+#search{
+  margin: 15px;
+  border: solid 3px #945d60;
 }

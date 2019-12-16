@@ -54,11 +54,16 @@ $("#submit").on("click", function(event) {
     var yield = data.hits[0].recipe.yield;
     console.log(yield);
 
+
     generateRecipeBlock(recipeName, recipeImage, ingredients, cookTime, calories, yield);
+
+    var generateRecipeBlock(recipeName);
+
 
 
   });
 });
+
 
    function generateRecipeBlock(){
 
@@ -74,6 +79,11 @@ $("#submit").on("click", function(event) {
 
     })
 
+
+
+  generateRecipeBlock(){
+
+    
 
   }
 

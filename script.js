@@ -74,7 +74,7 @@ $(document).ready(function() {
         <div class = "column small-8 details">
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
-          <h5>Cook Time: ${cookTime} Calories: ${Math.floor(
+          <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
         calories
       )} Servings: ${servings}</h5>
         </div>
@@ -93,7 +93,15 @@ $(document).ready(function() {
       }
     });
   });
+
+  $(".reciipe-card").on("click", function(event){
+    $(".reciipe-card").style = "display: flex";
+    
+
+  })
+
 });
+
 // $(document).on("click", ".movie",
 $(document).on("click", "h3", function() {
   // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
@@ -124,3 +132,6 @@ fetch(youtubeAPI, {
   .then(function(res) {
     console.log(res);
   });
+
+
+

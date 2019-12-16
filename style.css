@@ -87,8 +87,8 @@ body.sticky-shrinknav-wrapper
 }
 
 footer {
-  height: 80px;
-  padding: 20px;
+  height: 55px;
+  padding: 5px;
   width: 100%;
   color: antiquewhite;
   font-size: larger;
@@ -209,4 +209,17 @@ footer {
   padding: 20px;
   border: 2px solid black;
   margin-top: 2px;
+  margin: 0 auto;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+.recipeBlock{
+  margin: 0 auto;
+}
+
+img{
+  border: solid #945d60 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

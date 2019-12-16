@@ -7,13 +7,18 @@ $(document).ready(function() {
   var appKey = "87390675c80ad08855757b2abc17feb2";
   var data;
   var searchTerm = "chicken";
-
-  var recipeList = $(".recipe-list");
+  var recipeList = document.querySelector(".recipe-list");
+  var recipeBlock = document.querySelector(".recipeBlock");
   var homePage = $(".homePage");
-  var recipeBlock = $("#recipe-block-row");
   var imgCol = $("#col-1.img");
   var detailCol = $("#col-2.detail");
   var submitBtn = $("#submit");
+  var recipeName;
+  var recipeImage;
+  var ingredients;
+  var cookTime;
+  var calories;
+  var servings;
 
   //  click submit button to search for recipe
   $("#submit").on("click", function(event) {
@@ -34,48 +39,48 @@ $(document).ready(function() {
         data = res;
         console.log(data);
 
-        var recipeName = data.hits[0].recipe.label;
-        console.log(recipeName);
-
-        var recipeImage = data.hits[0].recipe.image;
-
-        var ingredients = data.hits[0].recipe.ingredients[0];
-        console.log(ingredients);
-
-        var cookTime = data.hits[0].recipe.totalTime;
-        console.log("Cook time is " + cookTime + " minutes");
-
-        var calories = data.hits[0].recipe.calories;
-        console.log(calories);
-
-        var servings = data.hits[0].recipe.yield;
-        console.log(servings);
-
-        generateRecipeBlock(
-          recipeName,
-          recipeImage,
-          ingredients,
-          cookTime,
-          calories,
-          servings
-        );
+        generateRecipeBlock();
       });
   });
 
-  function generateRecipeBlock(
-    recipeName,
-    recipeImage,
-    ingredients,
-    cookTime,
-    calories,
-    servings
-  ) {
-    recipeList.css("display", "flex");
+  function generateRecipeBlock() {
+    recipeList.style = "display: flex";
     homePage.css("display", "none");
+    var temp = "";
     for (i = 0; i <= 5; i++) {
-      imgCol.append(recipeImage);
-      detailCol.append(recipeName, ingredients, cookTime, calories, yield);
-      recipeBlock.append(imgCol, detailCol);
+      recipeName = data.hits[i].recipe.label;
+      console.log(recipeName);
+
+      recipeImage = data.hits[i].recipe.image;
+      console.log(recipeImage);
+
+      ingredients = data.hits[i].recipe.ingredients[0].text;
+      console.log(ingredients);
+
+      cookTime = data.hits[i].recipe.totalTime;
+      console.log("Cook time is " + cookTime + " minutes");
+
+      calories = data.hits[i].recipe.calories;
+      console.log(calories);
+
+      servings = data.hits[i].recipe.yield;
+      console.log(servings);
+
+      temp = `
+      <div class="row recipe-block">
+        <div class = "column small-4 img">
+          <img src="${recipeImage}">
+        </div>
+        <div class = "column small-8 details">
+          <h3>${recipeName}</h3>
+          <p>${ingredients}</p>
+          <h5>Cook Time: ${cookTime} Calories: ${Math.floor(
+        calories
+      )} Servings: ${servings}</h5>
+        </div>
+      </div>
+      `;
+      recipeBlock.innerHTML += temp;
     }
   }
   $(function() {

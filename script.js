@@ -74,7 +74,7 @@ $(document).ready(function() {
         <div class = "column small-8 details">
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
-          <h5>Cook Time: ${cookTime} Calories: ${Math.floor(
+          <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
         calories
       )} Servings: ${servings}</h5>
         </div>

@@ -126,6 +126,7 @@ footer {
   text-align: center;
   background-color: #f1f1f1;
   display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .recipe-card{
@@ -138,6 +139,7 @@ footer {
   text-align: center;
   background-color: #f1f1f1;
   display: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #submit{
@@ -151,6 +153,7 @@ footer {
   background-color:#AF473C;
  vertical-align: middle;
  font-weight: bolder;
+ box-shadow: 7px 3px 6px ivory;
 
 }
 
@@ -168,27 +171,29 @@ footer {
   background-color:#AF473C;
   vertical-align: middle;
   font-weight: bolder;
+  box-shadow: 7px 3px 6px ivory;
 }
 
 #addIngr:hover{
   background-color:#626E60;
+  
 }
 
 
 .Img{
 border: solid 3px #626E60;
-
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 padding: 20px;
 
 
 }
 
 .Details{
-  border: solid 3px #626E60;
+border: solid 3px #626E60;
 text-align: left;
 padding: 20px;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #search{

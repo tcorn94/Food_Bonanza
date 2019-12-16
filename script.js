@@ -82,6 +82,7 @@ $(document).ready(function() {
       `;
       recipeBlock.innerHTML += temp;
     }
+
   }
   $(function() {
     $(window).scroll(function() {
@@ -94,13 +95,20 @@ $(document).ready(function() {
     });
   });
 });
-// APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
-// var title = "garlic";
-// var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c="+ title;
-// //how to access API data (make http request)
-// fetch({
-//   url: queryURL,
-//   method: "GET"
-// }).then(function(response) {
-//   console.log(response);//comes back as an object, then we traverse through object to call info
-// });
+// $(document).on("click", ".movie",
+$(document).on("click", "h3", function(){
+  // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
+  var title = $(this);
+  console.log(title[0].innerText)
+  var name = title[0].innerText;
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c="+ name;
+  //how to access API data (make http request)
+  $.ajax({
+   url: queryURL,
+  method: "GET"
+  }).then(function(response) {
+      console.log(response);//comes back as an object, then we traverse through object to call info
+  });
+
+})
+

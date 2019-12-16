@@ -14,6 +14,7 @@ var data;
 var searchTerm = "chicken";
 
 var recipeList = $(".recipe-list");
+var homePage = $(".homePage");
 var recipeBlock = $("#recipe-block-row");
 var imgCol = $("#col-1.img");
 var detailCol = $("#col-2.detail");
@@ -63,6 +64,8 @@ $("#submit").on("click", function(event) {
    function generateRecipeBlock(){
 
     submitBtn.on("click", function(){
+      recipeList.css("display", "flex")
+      homePage.css("display", "none");
       for (i = 0; i <= 5; i++){
 
         imgCol.append(recipeImage);

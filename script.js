@@ -15,9 +15,6 @@ var searchTerm = "chicken";
 
 
 //  click submit button to search for recipe
-
-
-
 $("#submit").on("click", function(event) {
   event.preventDefault();
 
@@ -33,6 +30,23 @@ $("#submit").on("click", function(event) {
   .then(function(res) {
     data = res;
     console.log(data);
+
+    var recipeName = res.hits[0].recipe.label;
+    console.log(recipeName);
+
+    var recipeImage = res.hits[0].recipe.image;
+
+    var ingredients = res.hits[0].recipe.ingredients[0];
+    console.log(ingredients);
+
+    var cookTime = res.hits[0].recipe.totalTime;
+    console.log("Cook time is " + cookTime + " minutes");
+
+    var calories = res.hits[0].recipe.calories;
+    console.log(calories);
+
+    var yield = res.hits[0].recipe.yield;
+    console.log(yield);
 
   });
 });

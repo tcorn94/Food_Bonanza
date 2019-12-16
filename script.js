@@ -82,7 +82,6 @@ $(document).ready(function() {
       `;
       recipeBlock.innerHTML += temp;
     }
-
   }
   $(function() {
     $(window).scroll(function() {
@@ -102,5 +101,37 @@ $(document).ready(function() {
   })
 
 });
+
+// $(document).on("click", ".movie",
+$(document).on("click", "h3", function() {
+  // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
+  var title = $(this);
+  console.log(title[0].innerText);
+  var name = title[0].innerText;
+  var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c=" + name;
+  //how to access API data (make http request)
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response); //comes back as an object, then we traverse through object to call info
+  });
+});
+
+var youtubeAPI =
+  "https://www.googleapis.com/youtube/v3/search?&part=snippet&q=hills&type=video&key=AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M";
+fetch(youtubeAPI, {
+  part: "snippet",
+  q: "hill billy",
+  type: "video",
+  key: "AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M"
+})
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(res) {
+    console.log(res);
+  });
+
 
 

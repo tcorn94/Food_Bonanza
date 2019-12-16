@@ -47,6 +47,7 @@ $(document).ready(function() {
     recipeList.style = "display: flex";
     homePage.css("display", "none");
     var temp = "";
+    recipeBlock.innerHTML = "";
     for (i = 0; i <= 5; i++) {
       recipeName = data.hits[i].recipe.label;
       console.log(recipeName);
@@ -68,10 +69,10 @@ $(document).ready(function() {
 
       temp = `
       <div class="row recipe-block">
-        <div class = "column small-4 img">
+        <div class = "columns large-4 img">
           <img src="${recipeImage}">
         </div>
-        <div class = "column small-8 details">
+        <div class = "columns large-8 details">
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
@@ -94,45 +95,30 @@ $(document).ready(function() {
     });
   });
 
-  
-  $(".reciipe-card").on("click", function(event){
-    $(".reciipe-card").style = "display: flex";
-    
-
-  })
-  
-});
-
-// $(document).on("click", ".movie",
-$(document).on("click", "h3", function() {
-  // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
-  var title = $(this);
-  console.log(title[0].innerText);
-  var name = title[0].innerText;
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c=" + name;
-  //how to access API data (make http request)
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response); //comes back as an object, then we traverse through object to call info
+  $(document).on("click", "h3", function() {
+    // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
+    $(".recipe-card").style = "display: flex";
+    var youtubeData;
+    var title = $(this);
+    console.log(title[0].innerText);
+    var name = title[0].innerText;
+    const myKey = "AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M";
+    var url = new URL(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&key=${myKey}&q=${name}recipe`
+    );
+    fetch(url, {
+      method: "GET"
+    })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(res) {
+        console.log(res);
+        youtubeData = res;
+        var videoID = youtubeData.items[0].id.videoId;
+        var videoURL = `https://www.youtube.com/watch?v=${videoID}`;
+        console.log(videoID);
+        console.log(videoURL);
+      });
   });
 });
-
-var youtubeAPI =
-  "https://www.googleapis.com/youtube/v3/search?&part=snippet&q=hills&type=video&key=AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M";
-fetch(youtubeAPI, {
-  part: "snippet",
-  q: "hill billy",
-  type: "video",
-  key: "AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M"
-})
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(res) {
-    console.log(res);
-  });
-
-
-

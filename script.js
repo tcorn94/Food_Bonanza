@@ -74,7 +74,7 @@ $(document).ready(function() {
         <div class = "column small-8 details">
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
-          <h5>Cook Time: ${cookTime} Calories: ${Math.floor(
+          <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
         calories
       )} Servings: ${servings}</h5>
         </div>
@@ -95,20 +95,5 @@ $(document).ready(function() {
     });
   });
 });
-// $(document).on("click", ".movie",
-$(document).on("click", "h3", function(){
-  // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
-  var title = $(this);
-  console.log(title[0].innerText)
-  var name = title[0].innerText;
-  var queryURL = "https://www.themealdb.com/api/json/v1/1/list.php?c="+ name;
-  //how to access API data (make http request)
-  $.ajax({
-   url: queryURL,
-  method: "GET"
-  }).then(function(response) {
-      console.log(response);//comes back as an object, then we traverse through object to call info
-  });
 
-})
 

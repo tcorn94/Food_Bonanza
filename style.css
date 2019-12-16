@@ -90,7 +90,7 @@ footer {
   width: 100%;
   color: antiquewhite;
   font-size: larger;
-  background-color: #626E60;
+  background-color: #626e60;
   border-top: #3c3c3c solid 2px;
   position: fixed;
   bottom: 0;
@@ -116,22 +116,25 @@ footer {
   padding: 20px;
 }
 
-.recipe-list{
+.recipe-list {
   font-size: larger;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 20px;
-  border: solid 3px #AF473C;
+  border: solid 3px #af473c;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
   background-color: #f1f1f1;
   display: none;
+  width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.recipe-card{
+.recipe-card {
   font-size: larger;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   line-height: 20px;
   border: solid 3px #626e60;
   margin: 0 auto;
@@ -142,7 +145,7 @@ footer {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#submit{
+#submit {
   height: 40px;
   width: 80px;
   margin: 15px;
@@ -150,59 +153,55 @@ footer {
   color: #fefefe;
   padding: 10px;
   text-align: center;
-  background-color:#AF473C;
- vertical-align: middle;
- font-weight: bolder;
- box-shadow: 7px 3px 6px ivory;
-
+  background-color: #af473c;
+  vertical-align: middle;
+  font-weight: bolder;
+  box-shadow: 7px 3px 6px ivory;
 }
 
-#submit:hover{
+#submit:hover {
   background-color: #626e60;
 }
 
-#addIngr{
+#addIngr {
   height: 40px;
   width: 40px;
   margin: 15px;
   border: 2px solid #fefefe;
   color: #fefefe;
   text-align: center;
-  background-color:#AF473C;
+  background-color: #af473c;
   vertical-align: middle;
   font-weight: bolder;
   box-shadow: 7px 3px 6px ivory;
 }
 
-#addIngr:hover{
-  background-color:#626E60;
-  
+#addIngr:hover {
+  background-color: #626e60;
 }
 
-
-.Img{
-border: solid 3px #626E60;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-padding: 20px;
-
-
+.Img {
+  border: solid 3px #626e60;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
 }
 
-.Details{
-border: solid 3px #626E60;
-text-align: left;
-padding: 20px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.Details {
+  border: solid 3px #626e60;
+  text-align: left;
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#search{
+#search {
   margin: 15px;
   border: solid 3px #945d60;
 }
 
-#recipe-block-row{
-  width: 80%;
+.recipe-block {
+  width: 100%;
   padding: 20px;
-  
+  border: 2px solid black;
 }

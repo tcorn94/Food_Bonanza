@@ -95,12 +95,13 @@ $(document).ready(function() {
     });
   });
 
+  
   $(".reciipe-card").on("click", function(event){
     $(".reciipe-card").style = "display: flex";
     
 
   })
-
+  
 });
 
 

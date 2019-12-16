@@ -115,21 +115,56 @@ footer {
   padding: 20px;
 }
 
+.recipe-list{
+  font-size: larger;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 20px;
+  border: solid 2px black;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
 
-/*premade CSS*/
-#myBtn {
-  width: 200px;
-  font-size: 18px;
+.recipe-card{
+  font-size: larger;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 20px;
+  border: solid 2px black;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+#submit{
+  height: 30px;
+  width: 80px;
+  margin: 15px;
+  border: 2px solid #fefefe;
+  color: #fefefe;
   padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
+  text-align: center;
+  background-color: black;
+ padding-bottom: 10px;
+
 }
 
-#myBtn:hover {
-  background: #ddd;
-  color: black;
+#submit:hover{
+  background-color: darkgray;
 }
 
+#addIngr{
+  height: 30px;
+  width: 30px;
+  margin: 15px;
+  border: 2px solid #fefefe;
+  color: #fefefe;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+}
 
+#addIngr:hover{
+  background-color: darkgray;
+}

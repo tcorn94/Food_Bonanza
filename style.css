@@ -1,5 +1,7 @@
 body {
-  padding-top: 330px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .sticky-shrinknav-menu {
@@ -93,8 +95,10 @@ footer {
   background-color: #626e60;
   border-top: #3c3c3c solid 2px;
   position: fixed;
+  left: 0%;
   bottom: 0;
   text-align: center;
+  
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -204,4 +208,5 @@ footer {
   width: 100%;
   padding: 20px;
   border: 2px solid black;
+  margin-top: 2px;
 }

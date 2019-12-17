@@ -19,7 +19,7 @@ body {
   height: 3.75rem;
   line-height: 3.75rem;
   width: 100%;
-  background-color: rgba(23, 121, 186, 0.1);
+  background-color: rgba(12, 13, 14, 0.1);
   transition: all 0.5s ease;
 }
 
@@ -79,7 +79,7 @@ body.sticky-shrinknav-wrapper {
 
 body.sticky-shrinknav-wrapper .sticky-shrinknav-header {
   height: 3.75rem;
-  background-color: rgba(23, 121, 186, 0.9);
+  background-color: rgba(14, 15, 15, 0.5);
 }
 
 body.sticky-shrinknav-wrapper
@@ -102,7 +102,7 @@ footer {
   width: 100%;
   color: antiquewhite;
   font-size: larger;
-  background-color: #626e60;
+  background-color: rgba(14, 15, 15, 0.6);
   border-top: #3c3c3c solid 2px;
   position: fixed;
   left: 0%;
@@ -240,4 +240,30 @@ img {
 
 #player{
 margin: 20px;
+}
+
+.recipeTitle:hover{
+  color: #af473c;
+  cursor: pointer;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ivory;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #af473c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

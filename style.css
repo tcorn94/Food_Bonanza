@@ -98,7 +98,6 @@ footer {
   left: 0%;
   bottom: 0;
   text-align: center;
-  
 }
 
 /* Style the video: 100% width and height to cover the entire window */
@@ -212,14 +211,14 @@ footer {
   margin: 0 auto;
   margin: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- 
 }
 
-.recipeBlock{
+.recipeBlock {
   margin: 0 auto;
+  width: 100%;
 }
 
-img{
+img {
   border: solid #945d60 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

@@ -179,7 +179,14 @@ $(document).ready(function() {
     recipeName = data.hits[indexOfData].recipe.label;
     recipeImage = data.hits[indexOfData].recipe.image;
 
-    ingredients = data.hits[indexOfData].recipe.ingredients[0].text;
+    ingredients = data.hits[indexOfData].recipe.ingredientLines;
+
+    var ingredientLines;
+
+    for ( i = 0 ; i < ingredients.length; i++){
+      ingredientLines += `<p>${ingredients[i]} </p><br>`
+    }
+
 
     cookTime = data.hits[indexOfData].recipe.totalTime;
 
@@ -195,10 +202,8 @@ $(document).ready(function() {
       </div>
       <div class = "cells large-8 details">
         <h3 value="${i}">${recipeName}</h3>
-        <p>${ingredients}</p>
-        <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
-      calories
-    )} Servings: ${servings}</h5>
+        <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(calories)} Servings: ${servings}</h5>
+        ${ingredientLines}
       </div>     
       <div class="grid-x row vidSlot">
       <div class = "large-auto">

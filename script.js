@@ -9,6 +9,7 @@ $(document).ready(function() {
   var searchTerm = "chicken";
   var recipeList = document.querySelector(".recipe-list");
   var recipeBlock = document.querySelector(".recipeBlock");
+  var recipeCard = document.querySelector(".recipe-card");
   var homePage = $(".homePage");
   var imgCol = $("#col-1.img");
   var detailCol = $("#col-2.detail");
@@ -79,7 +80,7 @@ $(document).ready(function() {
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
-        calories
+        calories   
       )} Servings: ${servings}</h5>
         </div>
       </div>
@@ -123,8 +124,13 @@ $(document).ready(function() {
   });
 
   $(document).on("click", "h3", function() {
-    //APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
-    $(".recipe-card").style = "display: flex";
+
+    // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
+    recipeCard.style = "display: flex";
+    recipeList.style = "display: none"
+    homePage.css("display", "none");
+    
+
     var youtubeData;
     var title = $(this);
     console.log(title[0].innerText);
@@ -146,6 +152,7 @@ $(document).ready(function() {
         var videoURL = `https://www.youtube.com/watch?v=${videoID}`;
         console.log(videoID);
         console.log(videoURL);
+
       });
   });
 });

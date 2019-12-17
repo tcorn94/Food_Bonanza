@@ -105,6 +105,18 @@ $(document).ready(function() {
     var temp = "";
     recipeBlock.innerHTML = "";
     for (var i = 5; i < 9; i++) {
+      recipeName = data.hits[i].recipe.label;
+
+      recipeImage = data.hits[i].recipe.image;
+
+      ingredients = data.hits[i].recipe.ingredients[0].text;
+
+      cookTime = data.hits[i].recipe.totalTime;
+
+      calories = data.hits[i].recipe.calories;
+
+      servings = data.hits[i].recipe.yield;
+
       temp = `
       <div class="row recipe-block">
         <div class = "columns large-4 img">

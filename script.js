@@ -166,14 +166,39 @@ $(document).ready(function() {
         var videoURL = `https://www.youtube.com/embed/${videoID}`;
         console.log(videoID);
         console.log(videoURL);
+
+        // goes to a function that popukates 3rd page
+     displayRecipeCard(videoURL);
       });
-    // goes to a function that popukates 3rd page
-    // displayRecipeCard();
+    
   });
 
-  function displayRecipeCard() {
+  function displayRecipeCard(vid) {
     // some code
+    var vidy = vid;
+  console.log(vidy);
+    temp1 = `
+    <div class="row recipe-block">
+      <div class = "columns large-4 img">
+        <img src="${recipeImage}">
+      </div>
+      <div class = "columns large-8 details">
+        <h3 value="${i}">${recipeName}</h3>
+        <p>${ingredients}</p>
+        <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
+      calories
+    )} Servings: ${servings}</h5>
+      </div>
+    </div>
+    `;
 
 
+    var temp2 = `
+    <div class="row vidSlot">
+  <iframe class="video" width="560" height="315" src="${vidy}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+    `
+      recipeCard.innerHTML = temp1;
+      recipeCard.innerHTML += temp2;
   }
 });

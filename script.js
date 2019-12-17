@@ -75,7 +75,7 @@ $(document).ready(function() {
           <h3>${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
-        calories
+        calories   
       )} Servings: ${servings}</h5>
         </div>
       </div>

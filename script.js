@@ -22,6 +22,7 @@ $(document).ready(function() {
   var servings;
   var nextPage = document.querySelector(".nextPage");
   var firstPage = document.querySelector(".firstPage");
+  
 
   //  click submit button to search for recipe
   $("#submit").on("click", function(event) {
@@ -157,5 +158,7 @@ $(document).ready(function() {
 
   function displayRecipeCard() {
     // some code
+
+
   }
 });

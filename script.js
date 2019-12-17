@@ -51,6 +51,7 @@ $(document).ready(function() {
   function generateRecipeBlock() {
     recipeList.style = "display: flex";
     homePage.css("display", "none");
+    recipeCard.style = "display: none";
     var temp = "";
     recipeBlock.innerHTML = "";
     for (i = 0; i < 5; i++) {
@@ -103,6 +104,7 @@ $(document).ready(function() {
   nextPage.addEventListener("click", function() {
     recipeList.style = "display: flex";
     homePage.css("display", "none");
+    recipeCard.style = "display: none";
     var temp = "";
     recipeBlock.innerHTML = "";
     for (var i = 5; i < 9; i++) {

@@ -175,30 +175,39 @@ $(document).ready(function() {
 
   function displayRecipeCard(vid) {
     // some code
+    recipeCard.innerHTML = "";
+    recipeName = data.hits[indexOfData].recipe.label;
+    recipeImage = data.hits[indexOfData].recipe.image;
+
+    ingredients = data.hits[indexOfData].recipe.ingredients[0].text;
+
+    cookTime = data.hits[indexOfData].recipe.totalTime;
+
+    calories = data.hits[indexOfData].recipe.calories;
+
+    servings = data.hits[indexOfData].recipe.yieldindexOfData
     var vidy = vid;
   console.log(vidy);
     temp1 = `
-    <div class="row recipe-block">
-      <div class = "columns large-4 img">
+    <div class="grid-x row recipeDetails">
+      <div class = "cells large-4 img">
         <img src="${recipeImage}">
       </div>
-      <div class = "columns large-8 details">
+      <div class = "cells large-8 details">
         <h3 value="${i}">${recipeName}</h3>
         <p>${ingredients}</p>
         <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
       calories
     )} Servings: ${servings}</h5>
+      </div>     
+      <div class="grid-x row vidSlot">
+      <div class = "large-auto">
+      <iframe class="video" width="560" height="315" src="${vidy}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </div>
-    `;
-
-
-    var temp2 = `
-    <div class="row vidSlot">
-  <iframe class="video" width="560" height="315" src="${vidy}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-    `
+      </div>
+    </div>`
+  
       recipeCard.innerHTML = temp1;
-      recipeCard.innerHTML += temp2;
+
   }
 });

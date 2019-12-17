@@ -78,7 +78,7 @@ $(document).ready(function() {
           <img src="${recipeImage}">
         </div>
         <div class = "columns large-8 details">
-          <h3 value="${i}">${recipeName}</h3>
+          <h3 class="recipeTitle" value="${i}">${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
         calories

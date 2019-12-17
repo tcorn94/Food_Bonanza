@@ -22,7 +22,7 @@ $(document).ready(function() {
   var servings;
   var nextPage = document.querySelector(".nextPage");
   var firstPage = document.querySelector(".firstPage");
-  
+  var vidSlot = document.querySelector(".vidSlot");
 
   //  click submit button to search for recipe
   $("#submit").on("click", function(event) {

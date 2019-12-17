@@ -129,7 +129,7 @@ $(document).ready(function() {
     recipeCard.style = "display: flex";
     recipeList.style = "display: none"
     homePage.css("display", "none");
-    
+
 
     var youtubeData;
     var title = $(this);
@@ -152,7 +152,12 @@ $(document).ready(function() {
         var videoURL = `https://www.youtube.com/watch?v=${videoID}`;
         console.log(videoID);
         console.log(videoURL);
-
       });
+      // goes to a function that popukates 3rd page
+      displayRecipeCard();
   });
+
+  function displayRecipeCard(){
+    // some code 
+  }
 });

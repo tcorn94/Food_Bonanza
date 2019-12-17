@@ -77,10 +77,10 @@ $(document).ready(function() {
           <img src="${recipeImage}">
         </div>
         <div class = "columns large-8 details">
-          <h3>${recipeName}</h3>
+          <h3 value="${i}">${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
-        calories   
+        calories
       )} Servings: ${servings}</h5>
         </div>
       </div>
@@ -111,7 +111,7 @@ $(document).ready(function() {
           <img src="${recipeImage}">
         </div>
         <div class = "columns large-8 details">
-          <h3>${recipeName}</h3>
+          <h3 value="${i}">${recipeName}</h3>
           <p>${ingredients}</p>
           <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
         calories
@@ -124,12 +124,10 @@ $(document).ready(function() {
   });
 
   $(document).on("click", "h3", function() {
-
     // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
     recipeCard.style = "display: flex";
-    recipeList.style = "display: none"
+    recipeList.style = "display: none";
     homePage.css("display", "none");
-
 
     var youtubeData;
     var title = $(this);
@@ -153,11 +151,11 @@ $(document).ready(function() {
         console.log(videoID);
         console.log(videoURL);
       });
-      // goes to a function that popukates 3rd page
-      displayRecipeCard();
+    // goes to a function that popukates 3rd page
+    displayRecipeCard();
   });
 
-  function displayRecipeCard(){
-    // some code 
+  function displayRecipeCard() {
+    // some code
   }
 });

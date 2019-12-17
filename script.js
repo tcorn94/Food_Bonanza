@@ -23,9 +23,15 @@ $(document).ready(function() {
   var nextPage = document.querySelector(".nextPage");
   var firstPage = document.querySelector(".firstPage");
   var vidSlot = document.querySelector(".vidSlot");
+  var searchBar = $("#search");
+  
+  searchBar.on("change", fetchAPI);
+
 
   //  click submit button to search for recipe
-  $("#submit").on("click", function(event) {
+  $("#submit").on("click", fetchAPI);
+  function fetchAPI() {
+    console.log("hello")
     event.preventDefault();
 
     searchTerm = $("#search")
@@ -45,7 +51,7 @@ $(document).ready(function() {
 
         generateRecipeBlock();
       });
-  });
+  };
 
   firstPage.addEventListener("click", generateRecipeBlock);
   function generateRecipeBlock() {

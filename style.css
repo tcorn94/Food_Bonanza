@@ -157,6 +157,7 @@ footer {
   background-color: beige;
   display: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
 }
 
 #submit {
@@ -235,3 +236,24 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.vidSlot{
+  margin: 0 auto;
+  border: solid #945d60 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+
+}
+
+.recipeDetails{
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.large-8{
+  color: #626e60;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#player{
+margin: 20px;
+}

@@ -135,7 +135,7 @@ $(document).ready(function() {
       recipeBlock.innerHTML += temp;
     }
   });
-
+  var indexOfData;
   $(document).on("click", "h3", function() {
     // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
     recipeCard.style = "display: flex";
@@ -144,6 +144,9 @@ $(document).ready(function() {
 
     var youtubeData;
     var title = $(this);
+    console.log(title);
+    console.log(title[0].attributes[0].value);
+    indexOfData = title[0].attributes[0].value;
     console.log(title[0].innerText);
     var name = title[0].innerText;
     const myKey = "AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M";
@@ -160,12 +163,12 @@ $(document).ready(function() {
         console.log(res);
         youtubeData = res;
         var videoID = youtubeData.items[0].id.videoId;
-        var videoURL = `https://www.youtube.com/watch?v=${videoID}`;
+        var videoURL = `https://www.youtube.com/embed/${videoID}`;
         console.log(videoID);
         console.log(videoURL);
       });
     // goes to a function that popukates 3rd page
-    displayRecipeCard();
+    // displayRecipeCard();
   });
 
   function displayRecipeCard() {

@@ -1,4 +1,4 @@
-// https://api.edamam.com/search?q=chicken&app_id=${appID}&app_key=${appKey}
+//https://api.edamam.com/search?q=chicken&app_id=${appID}&app_key=${appKey}
 //https://www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
 //https://cors-anywhere.herokuapp.com/
 //https://api.edamam.com/search?q=chicken&app_id=8762ceb6&app_key=87390675c80ad08855757b2abc17feb2&from=0&to=3&calories=591-722&health=alcohol-free"
@@ -19,6 +19,8 @@ $(document).ready(function() {
   var cookTime;
   var calories;
   var servings;
+  var nextPage = document.querySelector(".nextPage");
+  var firstPage = document.querySelector(".firstPage");
 
   //  click submit button to search for recipe
   $("#submit").on("click", function(event) {
@@ -43,12 +45,13 @@ $(document).ready(function() {
       });
   });
 
+  firstPage.addEventListener("click", generateRecipeBlock);
   function generateRecipeBlock() {
     recipeList.style = "display: flex";
     homePage.css("display", "none");
     var temp = "";
     recipeBlock.innerHTML = "";
-    for (i = 0; i <= 5; i++) {
+    for (i = 0; i < 5; i++) {
       recipeName = data.hits[i].recipe.label;
       console.log(recipeName);
 
@@ -95,8 +98,32 @@ $(document).ready(function() {
     });
   });
 
+  nextPage.addEventListener("click", function() {
+    recipeList.style = "display: flex";
+    homePage.css("display", "none");
+    var temp = "";
+    recipeBlock.innerHTML = "";
+    for (var i = 5; i < 9; i++) {
+      temp = `
+      <div class="row recipe-block">
+        <div class = "columns large-4 img">
+          <img src="${recipeImage}">
+        </div>
+        <div class = "columns large-8 details">
+          <h3>${recipeName}</h3>
+          <p>${ingredients}</p>
+          <h5>Cook Time: ${cookTime}  Calories: ${Math.floor(
+        calories
+      )} Servings: ${servings}</h5>
+        </div>
+      </div>
+      `;
+      recipeBlock.innerHTML += temp;
+    }
+  });
+
   $(document).on("click", "h3", function() {
-    // APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
+    //APIKey = AIzaSyAaRcgnx00VKEpGmrynTsPq4RnDQNBQU9M
     $(".recipe-card").style = "display: flex";
     var youtubeData;
     var title = $(this);

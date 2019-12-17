@@ -178,22 +178,6 @@ footer {
   background-color: #626e60;
 }
 
-#addIngr {
-  height: 40px;
-  width: 40px;
-  margin: 15px;
-  border: 2px solid #fefefe;
-  color: #fefefe;
-  text-align: center;
-  background-color: #af473c;
-  vertical-align: middle;
-  font-weight: bolder;
-  box-shadow: 7px 3px 6px ivory;
-}
-
-#addIngr:hover {
-  background-color: #626e60;
-}
 
 .Img {
   border: solid 3px #626e60;

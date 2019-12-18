@@ -203,7 +203,7 @@ $(document).ready(function() {
 
     calories = data.hits[indexOfData].recipe.calories;
 
-    servings = data.hits[indexOfData].recipe.yieldindexOfData
+    servings = data.hits[indexOfData].recipe.yield;
     var vidy = vid;
   console.log(vidy);
 

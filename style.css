@@ -94,6 +94,7 @@ body.sticky-shrinknav-wrapper
 #headerLogo {
   align-content: center;
   margin-top: 10px;
+  border: none;
 }
 
 footer {
@@ -117,6 +118,8 @@ footer {
   right: 0;
   min-width: 100%;
   min-height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -242,7 +245,7 @@ img {
 margin: 20px;
 }
 
-.recipeTitle:hover{
+h3:hover{
   color: #af473c;
   cursor: pointer;
 
@@ -266,9 +269,4 @@ margin: 20px;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
-
-#headerLogo{
-  border: none;
-
 }

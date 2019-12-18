@@ -206,6 +206,7 @@ $(document).ready(function() {
     servings = data.hits[indexOfData].recipe.yieldindexOfData
     var vidy = vid;
   console.log(vidy);
+
     temp1 = `
     <div class="grid-x row recipeDetails">
       <div class = "cells large-4 img">
@@ -218,7 +219,7 @@ $(document).ready(function() {
       </div>     
       <div class="grid-x row vidSlot">
       <div class = "large-auto">
-      <iframe class="video" width="700" height="370" src="${vidy}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video" width="100%" height="100%" src="${vidy}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       </div>
     </div>`
